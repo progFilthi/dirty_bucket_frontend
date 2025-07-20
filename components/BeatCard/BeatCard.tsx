@@ -21,10 +21,10 @@ export default function BeatCard() {
       <CardContent className="flex justify-center">
         <div className="relative w-54 h-48">
           <Image
-            src="/pic1.jpeg"
+            src="/assets/pic2.jpeg"
             alt="beat cover"
             fill
-            className="object-cover rounded-md"
+            className="object-cover object-top rounded-md"
           />
         </div>
       </CardContent>
