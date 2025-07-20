@@ -9,6 +9,7 @@ import {
 } from "../ui/card";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import { Download } from "lucide-react";
 
 export default function BeatCard() {
   return (
@@ -30,14 +31,24 @@ export default function BeatCard() {
 
       <CardFooter className="flex flex-col items-center gap-3">
         <div className="flex justify-between w-full text-sm text-muted-foreground">
+          <div>
+            <CardDescription>
+              <span>D#m</span>
+            </CardDescription>
+            <CardDescription>
+              <span>150</span>
+            </CardDescription>
+          </div>
           <CardDescription>
-            Key: <span className="text-foreground">D#m</span>
-          </CardDescription>
-          <CardDescription>
-            BPM: <span className="text-foreground">150</span>
+            <span className="text-foreground">$29.99</span>
           </CardDescription>
         </div>
-        <Button className="w-full">Add to cart</Button>
+        <div className="flex items-center justify-between w-full gap-2">
+          <Button className="flex-1">Add to cart</Button>
+          <Button variant="outline">
+            <Download />
+          </Button>
+        </div>
       </CardFooter>
     </Card>
   );
