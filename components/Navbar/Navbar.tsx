@@ -10,13 +10,13 @@ export default function Navbar() {
     <div className="flex items-center justify-between py-2 px-4">
       <h1>Navbar</h1>
       <div className="gap-4 flex">
-        {theme === "dark" ? (
-          <Button onClick={() => setTheme("light")}>
-            <Sun />
-          </Button>
-        ) : (
+        {theme === "light" ? (
           <Button onClick={() => setTheme("dark")}>
             <Moon />
+          </Button>
+        ) : (
+          <Button onClick={() => setTheme("light")}>
+            <Sun />
           </Button>
         )}
       </div>
