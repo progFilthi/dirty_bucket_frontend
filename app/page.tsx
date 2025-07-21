@@ -1,15 +1,9 @@
-import BeatCard from "@/components/BeatCard/BeatCard";
 import React from "react";
 
-export default function page() {
+export default function Homepage() {
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 gap-6">
-      <BeatCard />
-      <BeatCard />
-      <BeatCard />
-      <BeatCard />
-      <BeatCard />
-      <BeatCard />
+    <div>
+      <h1 className="text-center text-2xl">This is the home page</h1>
     </div>
   );
 }

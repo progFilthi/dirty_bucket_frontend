@@ -1,25 +1,41 @@
 "use client";
-import { Moon, Sun } from "lucide-react";
 import React from "react";
-import { Button } from "../ui/button";
-import { useTheme } from "next-themes";
+import ThemeToggle from "../theme/ThemeToggle";
+import Link from "next/link";
 
+const Navlinks = [
+  {
+    label: "Dashboard",
+    href: "/dashboard",
+  },
+  {
+    label: "Beats",
+    href: "/beats",
+  },
+  {
+    label: "Cart",
+    href: "/cart",
+  },
+];
 export default function Navbar() {
-  const { setTheme, theme } = useTheme();
   return (
-    <div className="flex items-center justify-between py-2 px-4">
-      <h1>Navbar</h1>
-      <div className="gap-4 flex">
-        {theme === "light" ? (
-          <Button onClick={() => setTheme("dark")}>
-            <Moon />
-          </Button>
-        ) : (
-          <Button onClick={() => setTheme("light")}>
-            <Sun />
-          </Button>
-        )}
+    <nav className="flex items-center justify-between py-2 px-4">
+      <div>
+        <Link href={"/"}>DirtyBucket.</Link>
       </div>
-    </div>
+      <ul className="flex items-center justify-center gap-8 text-sm">
+        {/* <li>Dashboard</li>
+        <li>Beats</li>
+        <li>Cart</li> */}
+        {Navlinks.map((link) => {
+          return (
+            <Link href={link.href} key={link.href}>
+              <li>{link.label}</li>
+            </Link>
+          );
+        })}
+        <ThemeToggle />
+      </ul>
+    </nav>
   );
 }

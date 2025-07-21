@@ -12,7 +12,7 @@ export default function Container({ children }: ChildrenProps) {
       <header className="w-full sticky top-0 z-50 bg-background border-b">
         <Navbar />
       </header>
-      <main className="flex-1 w-full flex items-start justify-center">
+      <main className="flex-1 w-full flex items-start justify-center mt-4">
         {children}
       </main>
       <footer className="w-full border-t">
