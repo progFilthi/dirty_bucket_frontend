@@ -20,7 +20,7 @@ const Navlinks = [
 export default function Navbar() {
   return (
     <nav className="flex items-center justify-between py-2 px-4">
-      <div>
+      <div className="flex items-center justify-center gap-2">
         <Link href={"/"}>DirtyBucket.</Link>
       </div>
       <ul className="flex items-center justify-center gap-8 text-sm">
